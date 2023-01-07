@@ -2308,7 +2308,7 @@ repeat task.wait()
 EquipWeapon(_G.SelectWeapon)
 AutoHaki()
 PosMon = v.HumanoidRootPart.CFrame
-topos(v.HumanoidRootPart.CFrame * CFrame.new(20,10,20))
+topos(v.HumanoidRootPart.CFrame * CFrame.new(20,30,20))
 v.HumanoidRootPart.CanCollide = false
 v.Humanoid.WalkSpeed = 0
 v.Head.CanCollide = false
@@ -2327,11 +2327,11 @@ end
 else
 StartMagnet = false
 if game:GetService("ReplicatedStorage"):FindFirstChild(Mon) then
-topos(game:GetService("ReplicatedStorage"):FindFirstChild(Mon).HumanoidRootPart.CFrame * CFrame.new(20,10,20))
+topos(game:GetService("ReplicatedStorage"):FindFirstChild(Mon).HumanoidRootPart.CFrame * CFrame.new(20,30,20))
 else
 if (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 15 then
 if PosMon ~= nil then
-topos(PosMon * CFrame.new(20,10,20))
+topos(PosMon * CFrame.new(20,30,20))
 else
 if OldPos ~= nil then
 topos(OldPos.Position)
