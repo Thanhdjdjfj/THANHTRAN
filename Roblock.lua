@@ -2090,29 +2090,19 @@ game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
 game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
 end)
 --------------------------------------------------------------------
-local RenUi = library:AddWindow("THANH TRAN 2005",Enum.KeyCode.RightControl)
+local RenUi = library:AddWindow("THANH TRẦN 2005",Enum.KeyCode.RightControl)
 --------------------------------------------------------------------
 local Main = RenUi:AddTab("Menu Farm","6026568198")
 local Combat = RenUi:AddTab("Player","7251993295")
 local Stats = RenUi:AddTab("Stats","7040410130")
-local Teleport = RenUi:AddTab("Dá»ch Chuyá»n","6035190846")
+local Teleport = RenUi:AddTab("Dịch Chuyển","6035190846")
 local Dungeon = RenUi:AddTab("Raid","7044284832")
-local DevilFruit = RenUi:AddTab("TrÃ¡i Ãc Quá»·","7044233235")
+local DevilFruit = RenUi:AddTab("Trái Ác Quỷ","7044233235")
 local Shop = RenUi:AddTab("Shop","6031265976")
-local Misc = RenUi:AddTab("TÃ­nh nÄng khÃ¡c","6034509993")
+local Misc = RenUi:AddTab("Tính năng khác","6034509993")
 --------------------------------------------------------------------
-Main:AddSeperator("HÃ£y ÄÄng KÃ½ kÃªnh vÃ  TÃ­ch chuÃ´ng Äá» xem cÃ¡c Video vá» Hack Roblox má»i:)")
+Main:AddSeperator("Hãy Follow Kênh TikTok:Thanhtran2005isme để xem các Video về Hack Roblox mới:)")
 Main:AddSeperator("Settings Farm")
-
-Time = Main:AddLabel("Server Time")
-
-function UpdateTime()
-local GameTime = math.floor(workspace.DistributedGameTime+0.5)
-local Hour = math.floor(GameTime/(60^2))%24
-local Minute = math.floor(GameTime/(60^1))%60
-local Second = math.floor(GameTime/(60^0))%60
-Time:Set("Hr(s) : "..Hour.." Min(s) : "..Minute.." Sec(s) : "..Second)
-end
 
 spawn(function()
 while task.wait() do
@@ -2133,17 +2123,17 @@ end
 end
 end)
 
-Main:AddToggle("Delete Effect hit",false,function(value)
+Main:AddToggle("ẨN ĐÒN ĐÁNH",false,function(value)
 getgenv().D = value
 end)
 
-Main:AddButton("Delete Effect Damage", function()
+Main:AddButton("Xoá Hiệu Ứng Sát Thương", function()
 game:GetService("ReplicatedStorage").Assets.GUI.DamageCounter.Enabled = false
 end)
 
 Main:AddSeperator("FastAttack and Settings")
 
-Main:AddToggle("SuperFastAttack (MÃ¡y yáº¿u CÃ³ thá» bá» Lag náº¿u báº­t tÃ­nh nÄng nÃ y)",function()
+Main:AddToggle("Tấn Công Siêu Nhanh (Máy yếu Có thể bị Lag )",function()
     
 local plr = game.Players.LocalPlayer
 
@@ -2215,7 +2205,7 @@ AttackNoCD()
 end
 end)
 
-Main:AddToggle("Fast Attack",true,function(Fast)
+Main:AddToggle("Tấn Công Nhanh",true,function(Fast)
 
 _G.FastAttack = Fast
 
@@ -2243,7 +2233,7 @@ task.wait()
 end
 end)
 
-Main:AddToggle("Tá»± Äá»ng Äáº·t Äiá»m há»i sinh",true,function(value)
+Main:AddToggle("Tự động đặt điểm hồi sinh",true,function(value)
 _G.AutoSetSpawn = value
 end)
 
@@ -2284,7 +2274,7 @@ end)
 
 Main:AddSeperator("Main")
 
-local AutoFarm = Main:AddToggle("Auto Farm Level",_G.AutoFarm,function(value)
+local AutoFarm = Main:AddToggle("Tự Động Cày Level",_G.AutoFarm,function(value)
 _G.AutoFarm = value
 StopTween(_G.AutoFarm)
 end)
@@ -2322,10 +2312,10 @@ topos(v.HumanoidRootPart.CFrame * CFrame.new(5,10,7))
 v.HumanoidRootPart.CanCollide = false
 v.Humanoid.WalkSpeed = 0
 v.Head.CanCollide = false
-v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+v.HumanoidRootPart.Size = Vector3.new(200,200,200)
 StartMagnet = true
 game:GetService'VirtualUser':CaptureController()
-game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+game:GetService'VirtualUser':Button1Down(Vector2.new(2560, 1344))
 until not _G.AutoFarm or v.Humanoid.Health <= 0 or not v.Parent or game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false
 else
 StartMagnet = false
@@ -2468,7 +2458,7 @@ end)
 end
 
 if World2 then
-Main:AddToggle("Auto Farm Factory",_G.AutoFactory,function(value)
+Main:AddToggle("Tự Động Dùng Factory",_G.AutoFactory,function(value)
 _G.AutoFactory = value
 StopTween(_G.AutoFactory)
 end)
@@ -2514,9 +2504,9 @@ end
 end)
 end
 
-Main:AddSeperator("Auto Melee")
+Main:AddSeperator("Tự Động Dùng Và Mua")
 
-Main:AddToggle("Auto Superhuman",_G.AutoSuperhuman,function(value)
+Main:AddToggle("Auto Super Human",_G.AutoSuperhuman,function(value)
 _G.AutoSuperhuman = value
 end)
 
@@ -2593,7 +2583,7 @@ end
 end)
 end)
 
-Main:AddToggle("Auto DeathStep",_G.AutoDeathStep,function(value)
+Main:AddToggle("Auto Dùng Hắc Cước",_G.AutoDeathStep,function(value)
 _G.AutoDeathStep = value
 end)
 
@@ -2619,7 +2609,7 @@ end
 end
 end)
 
-Main:AddToggle("Auto Sharkman Karate",_G.AutoSharkman,function(value)
+Main:AddToggle("Auto Karate Người Cá",_G.AutoSharkman,function(value)
 _G.AutoSharkman = value
 end)
 
@@ -2667,7 +2657,7 @@ end
 end)
 end)
 
-Main:AddToggle("Auto Electric Claw",_G.AutoElectricClaw,function(value)
+Main:AddToggle("Auto móng vuốt điện",_G.AutoElectricClaw,function(value)
 _G.AutoElectricClaw = value
 StopTween(_G.AutoElectricClaw)
 end)
@@ -2738,7 +2728,7 @@ end
 end)
 end)
 
-Main:AddToggle("Auto Dragon Talon",_G.AutoDragonTalon,function(value)
+Main:AddToggle("Auto móng vuốt rồng",_G.AutoDragonTalon,function(value)
 _G.AutoDragonTalon = value
 end)
 
@@ -2766,7 +2756,7 @@ end)
 
 Main:AddSeperator("Mastery")
 
-Main:AddToggle("Auto Farm BF Mastery",_G.AutoFarmFruitMastery,function(value)
+Main:AddToggle("Tự Động Dùng Thông Thạo Fruit Masyery",_G.AutoFarmFruitMastery,function(value)
 _G.AutoFarmFruitMastery = value
 StopTween(_G.AutoFarmFruitMastery)
 if _G.AutoFarmFruitMastery == false then
@@ -3022,7 +3012,7 @@ end)
 end)
 end)
 
-Main:AddToggle("Auto Farm Gun Mastery",_G.AutoFarmGunMastery,function(value)
+Main:AddToggle("Tự Động Dùng Thông thạo súng",_G.AutoFarmGunMastery,function(value)
 _G.AutoFarmGunMastery = value
 StopTween(_G.AutoFarmGunMastery)
 end)
@@ -3106,8 +3096,8 @@ end
 end)
 end)
 
-_G.Kill_At = 25
-Main:AddSlider("Kill At %",1,100,25,function(value)
+_G.Kill_At = 200
+Main:AddSlider("Phạm Vi %",100,100,200,function(value)
 _G.Kill_At = value
 end)
 
@@ -3124,11 +3114,11 @@ end
 end
 end
 
-local BossName = Main:AddDropdown("Select Boss",Boss,function(value)
+local BossName = Main:AddDropdown("Lựa Chọn Boss",Boss,function(value)
 _G.SelectBoss = value
 end)
 
-Main:AddButton("Refresh Boss",function()
+Main:AddButton("Làm Mới Boss",function()
 BossName:Clear()
 for i, v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
 if string.find(v.Name, "Boss") then
@@ -3137,7 +3127,7 @@ end
 end
 end)
 
-Main:AddToggle("Auto Farm Boss",_G.AutoFarmBoss,function(value)
+Main:AddToggle("Tự Động Đánh Boss",_G.AutoFarmBoss,function(value)
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
 _G.AutoFarmBoss = value
 StopTween(_G.AutoFarmBoss)
@@ -3175,12 +3165,12 @@ end
 end
 end)
 
-Main:AddToggle("Auto Farm All Boss",_G.AutoAllBoss,function(value)
+Main:AddToggle("Tự Động Đánh Tất Cả Boss",_G.AutoAllBoss,function(value)
 _G.AutoAllBoss = value
 StopTween(_G.AutoAllBoss)
 end)
 
-Main:AddToggle("Auto Farm All Boss Hop",_G.AutoAllBossHop,function(value)
+Main:AddToggle(" Tự Động Đánh Boss Nhảy",_G.AutoAllBossHop,function(value)
 _G.AutoAllBossHop = value
 end)
 
@@ -3650,7 +3640,7 @@ end)
 
 Main:AddSeperator("Bone")
 
-local BoneFarm = Main:AddToggle("Auto Farm Bone",_G.Auto_Bone,function(value)
+local BoneFarm = Main:AddToggle("Tự Động Dùng Bone",_G.Auto_Bone,function(value)
 _G.Auto_Bone = value
 StopTween(_G.Auto_Bone)
 end)
@@ -3723,7 +3713,7 @@ end)
 end
 end)
 
-Main:AddToggle("Auto Farm Observation",_G.AutoObservation,function(value)
+Main:AddToggle("Tự Động Dùng HaKi Quan Sát",_G.AutoObservation,function(value)
 _G.AutoObservation = value
 StopTween(_G.AutoObservation)
 end)
@@ -3745,7 +3735,7 @@ end)
 end
 end)
 
-Main:AddToggle("Auto Farm Observation Hop",_G.AutoObservation_Hop,function(value)
+Main:AddToggle("Tự Động Dùng Observation Hop",_G.AutoObservation_Hop,function(value)
 _G.AutoObservation_Hop = value
 end)
 
@@ -3756,7 +3746,7 @@ if _G.AutoObservation then
 if game:GetService("Players").LocalPlayer.VisionRadius.Value >= 3000 then
 game:GetService("StarterGui"):SetCore("SendNotification", {
 Icon = "rbxassetid://0";
-Title = "Observation",
+Title = "HaKi Quan Sát",
 Text = "You Have Max Points"
 })
 wait(2)
@@ -3822,9 +3812,9 @@ end
 end)
 end)
 
-Main:AddSeperator("Saber")
+Main:AddSeperator("Kiếm")
 
-Main:AddToggle("Auto Saber",_G.AutoSaber,function(value)
+Main:AddToggle("Tự Động Dùng Kiếm",_G.AutoSaber,function(value)
 _G.AutoSaber = value
 StopTween(_G.AutoSaber)
 end)
@@ -3871,9 +3861,9 @@ end
 end
 end)
 
-Main:AddSeperator("Legendary Sword")
+Main:AddSeperator("Thanh Kiếm Huyền Thoại")
 
-Main:AddToggle("Auto Legendary Sword",_G.AutoBuyLegendarySword,function(value)
+Main:AddToggle("Auto Thanh Kiếm Huyền Thoại",_G.AutoBuyLegendarySword,function(value)
 _G.AutoBuyLegendarySword = value
 end)
 
@@ -3905,7 +3895,7 @@ end
 end
 end)
 
-Main:AddToggle("Auto Legendary Sword Hop",_G.AutoBuyLegendarySword_Hop,function(value)
+Main:AddToggle("Auto Thanh Kiếm Huyền Thoại Hop",_G.AutoBuyLegendarySword_Hop,function(value)
 _G.AutoBuyLegendarySword_Hop = value
 end)
 
@@ -4228,7 +4218,7 @@ end
 end)
 end)
 
-Main:AddToggle("Auto Farm Ectoplasm",_G.AutoEctoplasm,function(value)
+Main:AddToggle("Tự Động Dùng Ectoplasm",_G.AutoEctoplasm,function(value)
 _G.AutoEctoplasm = value
 StopTween(_G.AutoEctoplasm)
 end)
@@ -4732,7 +4722,7 @@ StopTween(_G.TeleportPly)
 end)
 end)
 
-Combat:AddToggle("Auto Farm Player",false,function(value)
+Combat:AddToggle("Tự Động Dùng Player",false,function(value)
 _G.Auto_Kill_Ply = value
 StopTween(_G.Auto_Kill_Ply)
 end)
@@ -4927,7 +4917,7 @@ end)
 end
 end)
 
-Combat:AddToggle("Auto Farm Bounty",_G.AutoFarmBounty,function(value)
+Combat:AddToggle("Tự Động Dùng Bounty",_G.AutoFarmBounty,function(value)
 _G.AutoFarmBounty = value
 StopTween(_G.AutoFarmBounty)
 end)
@@ -5090,7 +5080,7 @@ end
 end)
 end)
 
-Combat:AddToggle("Auto Farm Bounty Hop",_G.AutoFarmBounty_Hop,function(value)
+Combat:AddToggle("Tự Động Dùng Bounty Hop",_G.AutoFarmBounty_Hop,function(value)
 _G.AutoFarmBounty_Hop = value
 end)
 
@@ -5590,7 +5580,7 @@ end
 end)
 end)
 
-Dungeon:AddToggle("Auto Farm Dungeon",_G.Auto_Dungeon,function(value)
+Dungeon:AddToggle("Tự Động Dùng Dungeon",_G.Auto_Dungeon,function(value)
 _G.Auto_Dungeon = value
 StopTween(_G.Auto_Dungeon)
 end)
