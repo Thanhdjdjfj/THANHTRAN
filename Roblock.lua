@@ -3097,7 +3097,7 @@ end)
 end)
 
 _G.Kill_At = 200
-Main:AddSlider("Phạm Vi %",100,100,200,function(value)
+Main:AddSlider("Phạm Vi %",200,200,200,function(value)
 _G.Kill_At = value
 end)
 
