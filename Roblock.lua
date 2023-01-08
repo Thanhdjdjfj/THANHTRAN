@@ -2100,6 +2100,7 @@ local Dungeon = RenUi:AddTab("Raid","7044284832")
 local DevilFruit = RenUi:AddTab("Trái Ác Quỷ","7044233235")
 local Shop = RenUi:AddTab("Shop","6031265976")
 local Misc = RenUi:AddTab("Tính năng khác","6034509993")
+local Thanh = RenUi:AddTab("Định Vị","7040410130")
 --------------------------------------------------------------------
 Main:AddSeperator("Hãy Follow Kênh TikTok:Thanhtran2005isme để xem các Video về Hack Roblox mới:)")
 Main:AddSeperator("Settings Farm")
@@ -6313,6 +6314,7 @@ end)
 Misc:AddSeperator("Codes")
 
 local x2Code = {
+"kittgaming",
 "3BVISITS",
 "UPD16",
 "FUDD10",
@@ -6472,42 +6474,6 @@ Misc:AddButton("Unlock FPS",function()
 setfpscap(100)
 end)
 
-Misc:AddSeperator("ESP")
-
-Misc:AddToggle("ESP Player",false,function(value)
-ESPPlayer = value
-while ESPPlayer do wait()
-UpdateEspPlayer()
-end
-end)
-
-Misc:AddToggle("ESP Chest",false,function(value)
-ChestESP = value
-while ChestESP do wait()
-UpdateChestEsp()
-end
-end)
-
-Misc:AddToggle("ESP Fruit",false,function(value)
-DevilFruitESP = value
-while DevilFruitESP do wait()
-UpdateBfEsp()
-end
-end)
-
-Misc:AddToggle("ESP Flower",false,function(value)
-FlowerESP = value
-while FlowerESP do wait()
-UpdateFlowerEsp()
-end
-end)
-
-Misc:AddToggle("ESP Island",IslandESP,function(value)
-IslandESP = value
-while IslandESP do wait()
-UpdateIslandESP()
-end
-end)
 
 Misc:AddSeperator("Abilities")
 
@@ -6664,6 +6630,44 @@ if Fly then
 fly()
 end
 end)
+end
+end)
+end)
+end)
+Thanh:AddSeperator("ESP")
+
+Thanh:AddToggle("ESP Player",false,function(value)
+ESPPlayer = value
+while ESPPlayer do wait()
+UpdateEspPlayer()
+end
+end)
+
+Thanh:AddToggle("ESP Chest",false,function(value)
+ChestESP = value
+while ChestESP do wait()
+UpdateChestEsp()
+end
+end)
+
+Thanh:AddToggle("ESP Fruit",false,function(value)
+DevilFruitESP = value
+while DevilFruitESP do wait()
+UpdateBfEsp()
+end
+end)
+
+Thanh:AddToggle("ESP Flower",false,function(value)
+FlowerESP = value
+while FlowerESP do wait()
+UpdateFlowerEsp()
+end
+end)
+
+Thanh:AddToggle("ESP Island",IslandESP,function(value)
+IslandESP = value
+while IslandESP do wait()
+UpdateIslandESP()
 end
 end)
 end
