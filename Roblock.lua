@@ -1782,8 +1782,8 @@ NumberSequenceKeypoint.new(1, 4);
 }
 inf.Size = NumberSequence.new(numberKeypoints2)
 inf.RotSpeed = NumberRange.new(999, 9999)
-inf.Rotation = NumberRange.new(1000, 1000)
-inf.Speed = NumberRange.new(1000, 1000)
+inf.Rotation = NumberRange.new(0, 0)
+inf.Speed = NumberRange.new(30, 30)
 inf.SpreadAngle = Vector2.new(360,360)
 inf.Texture = "rbxassetid://7157487174"
 inf.VelocityInheritance = 0
@@ -2104,6 +2104,16 @@ local Misc = RenUi:AddTab("Tính năng khác","6034509993")
 Main:AddSeperator("Hãy Follow Kênh TikTok:Thanhtran2005isme để xem các Video về Hack Roblox mới:)")
 Main:AddSeperator("Settings Farm")
 
+Time = Main:AddLabel("Server Time")
+
+function UpdateTime()
+local GameTime = math.floor(workspace.DistributedGameTime+0.5)
+local Hour = math.floor(GameTime/(60^2))%24
+local Minute = math.floor(GameTime/(60^1))%60
+local Second = math.floor(GameTime/(60^0))%60
+Time:Set("Hr(s) : "..Hour.." Min(s) : "..Minute.." Sec(s) : "..Second)
+end
+
 spawn(function()
 while task.wait() do
 pcall(function()
@@ -2133,7 +2143,7 @@ end)
 
 Main:AddSeperator("FastAttack and Settings")
 
-Main:AddToggle("Tấn Công Siêu Nhanh (Máy yếu Có thể bị Lag )",function()
+Main:AddToggle("Tấn Công Siêu Nhanh (Máy yếu Có thể bị Lag nếu bật tính năng này)",function()
     
 local plr = game.Players.LocalPlayer
 
@@ -2274,7 +2284,7 @@ end)
 
 Main:AddSeperator("Main")
 
-local AutoFarm = Main:AddToggle("Tự Động Cày Level",_G.AutoFarm,function(value)
+local AutoFarm = Main:AddToggle("Tự Động Dùng Level",_G.AutoFarm,function(value)
 _G.AutoFarm = value
 StopTween(_G.AutoFarm)
 end)
@@ -2308,11 +2318,11 @@ repeat task.wait()
 EquipWeapon(_G.SelectWeapon)
 AutoHaki()
 PosMon = v.HumanoidRootPart.CFrame
-topos(v.HumanoidRootPart.CFrame * CFrame.new(20,30,20))
+topos(v.HumanoidRootPart.CFrame * CFrame.new(5,50,7))
 v.HumanoidRootPart.CanCollide = false
 v.Humanoid.WalkSpeed = 0
 v.Head.CanCollide = false
-v.HumanoidRootPart.Size = Vector3.new(200,200,200)
+v.HumanoidRootPart.Size = Vector3.new(50,50,50)
 StartMagnet = true
 game:GetService'VirtualUser':CaptureController()
 game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
@@ -2327,11 +2337,11 @@ end
 else
 StartMagnet = false
 if game:GetService("ReplicatedStorage"):FindFirstChild(Mon) then
-topos(game:GetService("ReplicatedStorage"):FindFirstChild(Mon).HumanoidRootPart.CFrame * CFrame.new(20,30,20))
+topos(game:GetService("ReplicatedStorage"):FindFirstChild(Mon).HumanoidRootPart.CFrame * CFrame.new(5,50,7))
 else
 if (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 15 then
 if PosMon ~= nil then
-topos(PosMon * CFrame.new(20,30,20))
+topos(PosMon * CFrame.new(5,50,7))
 else
 if OldPos ~= nil then
 topos(OldPos.Position)
@@ -3096,8 +3106,8 @@ end
 end)
 end)
 
-_G.Kill_At = 200
-Main:AddSlider("Phạm Vi %",200,200,200,function(value)
+_G.Kill_At = 100
+Main:AddSlider("Phạm Vi %",100,100,100,function(value)
 _G.Kill_At = value
 end)
 
