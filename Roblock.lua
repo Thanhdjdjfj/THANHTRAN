@@ -165,7 +165,7 @@ UserText,TweenInfo.new(1,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut),
 wait(.5)
 game:GetService('TweenService'):Create(
 UserText,TweenInfo.new(1,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut),
-{TextColor3 = Color3.fromRGB(0, 255, 0)}
+{TextColor3 = Color3.fromRGB(255, 0, 0)}
 ):Play()
 wait(.5)
 game:GetService('TweenService'):Create(
