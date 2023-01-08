@@ -165,7 +165,7 @@ UserText,TweenInfo.new(1,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut),
 wait(.5)
 game:GetService('TweenService'):Create(
 UserText,TweenInfo.new(1,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut),
-{TextColor3 = Color3.fromRGB(255, 0, 0)}
+{TextColor3 = Color3.fromRGB(0, 255, 0)}
 ):Play()
 wait(.5)
 game:GetService('TweenService'):Create(
@@ -2101,7 +2101,7 @@ local DevilFruit = RenUi:AddTab("Trái Ác Quỷ","7044233235")
 local Shop = RenUi:AddTab("Shop","6031265976")
 local Misc = RenUi:AddTab("Tính năng khác","6034509993")
 local Thanh = RenUi:AddTab("Định Vị","7040410130")
-local Thanh1 = RenUi:AddTab("Chức Năng Vip","7040410130")
+local Modvip = RenUi:AddTab("Chức Năng Vip","6026568198")
 --------------------------------------------------------------------
 Main:AddSeperator("Hãy Follow Kênh TikTok:Thanhtran2005isme để xem các Video về Hack Roblox mới:)")
 Main:AddSeperator("Settings Farm")
@@ -6639,12 +6639,13 @@ UpdateIslandESP()
 end
 end)
 
-Thanh1:AddToggle("Tốc Chạy Tộc Mink",false,function(value)
+Modvip:AddToggle("Infinite Ability",false,function(value)
 InfAbility = value
 if value == false then
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility"):Destroy()
 end
 end)
+
 spawn(function()
 while wait() do
 if InfAbility then
