@@ -1783,7 +1783,7 @@ NumberSequenceKeypoint.new(1, 4);
 inf.Size = NumberSequence.new(numberKeypoints2)
 inf.RotSpeed = NumberRange.new(999, 9999)
 inf.Rotation = NumberRange.new(0, 0)
-inf.Speed = NumberRange.new(30, 30)
+inf.Speed = NumberRange.new(100, 100)
 inf.SpreadAngle = Vector2.new(360,360)
 inf.Texture = "rbxassetid://7157487174"
 inf.VelocityInheritance = 0
@@ -2310,7 +2310,7 @@ AutoHaki()
 PosMon = v.HumanoidRootPart.CFrame
 topos(v.HumanoidRootPart.CFrame * CFrame.new(20,30,20))
 v.HumanoidRootPart.CanCollide = false
-v.Humanoid.WalkSpeed = 0
+v.Humanoid.WalkSpeed = 999
 v.Head.CanCollide = false
 v.HumanoidRootPart.Size = Vector3.new(200,200,200)
 StartMagnet = true
