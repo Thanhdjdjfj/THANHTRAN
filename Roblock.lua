@@ -2083,7 +2083,7 @@ Toggle.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 Toggle.Size = UDim2.new(0, 50, 0, 50)
 Toggle.Font = Enum.Font.Code
 Toggle.Text = "TNT"
-Toggle.TextColor3 = Color3.fromRGB(255, 0, 0)
+Toggle.TextColor3 = Color3.fromRGB(0, 255, 0,)
 Toggle.TextScaled = true
 Toggle.MouseButton1Down:connect(function()
 game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
@@ -2094,34 +2094,18 @@ local RenUi = library:AddWindow("THANH TRẦN 2005",Enum.KeyCode.RightControl)
 --------------------------------------------------------------------
 local Main = RenUi:AddTab("Menu Farm","6026568198")
 local Combat = RenUi:AddTab("Player","7251993295")
-local Stats = RenUi:AddTab("Stats","7040410130")
+local Stats = RenUi:AddTab("Cộng Chỉ Số","7040410130")
 local Teleport = RenUi:AddTab("Dịch Chuyển","6035190846")
 local Dungeon = RenUi:AddTab("Raid","7044284832")
 local DevilFruit = RenUi:AddTab("Trái Ác Quỷ","7044233235")
 local Shop = RenUi:AddTab("Shop","6031265976")
 local Misc = RenUi:AddTab("Tính năng khác","6034509993")
 local Thanh = RenUi:AddTab("Định Vị","7040410130")
+local Thanh1 = RenUi:AddTab("Chức Năng Vip","7040410130")
 --------------------------------------------------------------------
 Main:AddSeperator("Hãy Follow Kênh TikTok:Thanhtran2005isme để xem các Video về Hack Roblox mới:)")
 Main:AddSeperator("Settings Farm")
 
-Time = Main:AddLabel("Server Time")
-
-function UpdateTime()
-local GameTime = math.floor(workspace.DistributedGameTime+0.5)
-local Hour = math.floor(GameTime/(60^2))%24
-local Minute = math.floor(GameTime/(60^1))%60
-local Second = math.floor(GameTime/(60^0))%60
-Time:Set("Hr(s) : "..Hour.." Min(s) : "..Minute.." Sec(s) : "..Second)
-end
-
-spawn(function()
-while task.wait() do
-pcall(function()
-UpdateTime()
-end)
-end
-end)
 
 Main:AddButton("Remove Sound",function()
 
@@ -6501,20 +6485,6 @@ end
 end)
 end)
 
-Misc:AddToggle("Infinite Ability",false,function(value)
-InfAbility = value
-if value == false then
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility"):Destroy()
-end
-end)
-
-spawn(function()
-while wait() do
-if InfAbility then
-InfAb()
-end
-end
-end)
 
 Misc:AddToggle("Infinite Obversation Range",getgenv().InfiniteObRange,function(value)
 getgenv().InfiniteObRange = value
@@ -6666,6 +6636,20 @@ Thanh:AddToggle("ESP Island",IslandESP,function(value)
 IslandESP = value
 while IslandESP do wait()
 UpdateIslandESP()
+end
+end)
+
+Thanh1:AddToggle("Tốc Chạy Tộc Mink",false,function(value)
+InfAbility = value
+if value == false then
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility"):Destroy()
+end
+end)
+spawn(function()
+while wait() do
+if InfAbility then
+InfAb()
+end
 end
 end)
 end
