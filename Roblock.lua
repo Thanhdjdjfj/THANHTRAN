@@ -1782,8 +1782,8 @@ NumberSequenceKeypoint.new(1, 4);
 }
 inf.Size = NumberSequence.new(numberKeypoints2)
 inf.RotSpeed = NumberRange.new(999, 9999)
-inf.Rotation = NumberRange.new(0, 0)
-inf.Speed = NumberRange.new(100, 100)
+inf.Rotation = NumberRange.new(1000, 1000)
+inf.Speed = NumberRange.new(1000, 1000)
 inf.SpreadAngle = Vector2.new(360,360)
 inf.Texture = "rbxassetid://7157487174"
 inf.VelocityInheritance = 0
@@ -2310,12 +2310,12 @@ AutoHaki()
 PosMon = v.HumanoidRootPart.CFrame
 topos(v.HumanoidRootPart.CFrame * CFrame.new(20,30,20))
 v.HumanoidRootPart.CanCollide = false
-v.Humanoid.WalkSpeed = 999
+v.Humanoid.WalkSpeed = 0
 v.Head.CanCollide = false
 v.HumanoidRootPart.Size = Vector3.new(200,200,200)
 StartMagnet = true
 game:GetService'VirtualUser':CaptureController()
-game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))
+game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
 until not _G.AutoFarm or v.Humanoid.Health <= 0 or not v.Parent or game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false
 else
 StartMagnet = false
